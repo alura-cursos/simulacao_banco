@@ -12,7 +12,7 @@ public class OperacaoSaque implements Runnable{
         this.valor = valor;
     }
 
-    public void executa() {
+    public synchronized void executa() {
         System.out.println("Iniciando operação de saque.");
         var saldoAtual = conta.getSaldo();
 
